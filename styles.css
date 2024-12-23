@@ -6,9 +6,11 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background: linear-gradient(135deg, #1e2a47, #283149);
+    color: #f5f5f5;
     line-height: 1.6;
+    overflow-x: hidden;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .container {
@@ -21,12 +23,18 @@ header {
     background: #34495e;
     color: #fff;
     padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
 }
 
 header h1 {
     font-size: 2.5em;
     letter-spacing: 2px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
 nav ul {
@@ -49,12 +57,31 @@ nav ul li a {
     text-transform: uppercase;
     padding: 8px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #e74c3c;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
 nav ul li a:hover {
-    background-color: #e74c3c;
-    color: #fff;
+    color: #e74c3c;
+    transform: translateY(-5px);
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .hero {
@@ -63,6 +90,8 @@ nav ul li a:hover {
     padding: 150px 0;
     text-align: center;
     position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease-out;
 }
 
 .hero::after {
@@ -72,7 +101,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -81,12 +110,14 @@ nav ul li a:hover {
     font-weight: 700;
     z-index: 2;
     margin-bottom: 20px;
+    animation: slideUp 1s ease-out;
 }
 
 .hero p {
     font-size: 1.2em;
     font-weight: 300;
     margin-bottom: 30px;
+    animation: slideUp 1.5s ease-out;
 }
 
 .hero .btn {
@@ -96,7 +127,9 @@ nav ul li a:hover {
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 30px;
+    position: relative;
     transition: background-color 0.3s, transform 0.3s;
+    animation: bounceIn 2s ease-out;
 }
 
 .hero .btn:hover {
@@ -106,6 +139,9 @@ nav ul li a:hover {
 
 section {
     padding: 80px 0;
+    background: #ecf0f1;
+    position: relative;
+    overflow: hidden;
 }
 
 h2 {
@@ -114,6 +150,7 @@ h2 {
     text-align: center;
     margin-bottom: 40px;
     font-weight: 700;
+    animation: fadeIn 1s ease-out;
 }
 
 .destination-grid {
@@ -126,22 +163,24 @@ h2 {
 .destination {
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
 }
 
 .destination img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
 .destination:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
 }
 
 .destination:hover img {
@@ -177,7 +216,7 @@ h2 {
 
 .gallery-grid img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -185,6 +224,7 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
 footer .socials {
@@ -195,7 +235,7 @@ footer .socials a {
     color: #fff;
     font-size: 1.5em;
     margin: 0 15px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 footer .socials a:hover {
@@ -208,7 +248,9 @@ form {
     background: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 form label {
@@ -218,17 +260,21 @@ form label {
     font-weight: 500;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 12px;
     margin: 10px 0 20px;
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 1em;
+    transition: border 0.3s ease;
 }
 
-form textarea {
-    height: 150px;
+form input:focus,
+form textarea:focus {
+    border: 2px solid #e74c3c;
+    outline: none;
 }
 
 form button {
@@ -247,6 +293,50 @@ form button:hover {
     transform: scale(1.05);
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     header h1 {
@@ -263,9 +353,5 @@ form button:hover {
 
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
-    form {
-        padding: 20px;
     }
 }
