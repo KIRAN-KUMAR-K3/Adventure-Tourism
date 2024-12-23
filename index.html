@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -27,7 +28,7 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="container">
+        <div class="hero-content">
             <h2>Explore the Beauty of Nature</h2>
             <p>Join us on an adventure to some of the most breathtaking locations!</p>
             <a href="#destinations" class="btn">Explore Destinations</a>
@@ -87,41 +88,45 @@
 
     <section id="gallery" class="container">
         <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <img src="images/d harmasthala.jpg" alt="Dharmasthala">
-            <img src="images/ins_museum.jpg" alt="INS Museum">
-            <img src="images/rock_garden.jpg" alt="Rock Garden">
-            <img src="images/gokarna_beach.jpg" alt="Gokarna Beach">
-            <img src="images/mahabaleshwar.jpg" alt="Mahabaleshwar">
-            <img src="images/yana_caves.jpg" alt="Yana Caves">
-            <img src="images/mirjan_fort.jpg" alt="Mirjan Fort">
-            <img src="images/sharawati_backwater.jpg" alt="Sharawati Backwater">
+        <div class="gallery-grid ">
+            <img src="images/gallery1.jpg" alt="Gallery Image 1" class="gallery-item">
+            <img src="images/gallery2.jpg" alt="Gallery Image 2" class="gallery-item">
+            <img src="images/gallery3.jpg" alt="Gallery Image 3" class="gallery-item">
+            <img src="images/gallery4.jpg" alt="Gallery Image 4" class="gallery-item">
+            <img src="images/gallery5.jpg" alt="Gallery Image 5" class="gallery-item">
+            <img src="images/gallery6.jpg" alt="Gallery Image 6" class="gallery-item">
         </div>
     </section>
 
     <section id="blog" class="container">
         <h2>Blog</h2>
-        <p>Read about my adventures, travel tips, and stories from the road. Join the community of fellow travelers and share your experiences!</p>
+        <p>Read our latest travel tips, personal experiences, and stories from fellow adventurers.</p>
     </section>
 
     <section id="contact" class="container">
         <h2>Contact Us</h2>
-        <form>
+        <form action="#" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            <button type="submit" class="btn">Send</button>
+            <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2023 Adventure Tourism. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
