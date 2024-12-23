@@ -1,49 +1,68 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Document loaded. Ready to add functionality!');
-
-    // Smooth Scroll for Navigation Links
-    const links = document.querySelectorAll('nav ul li a');
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
+// Function to toggle dark mode
+const toggleDarkMode = () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+  };
+  
+  // Check if dark mode is enabled from previous session
+  if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark-mode");
+  }
+  
+  // Event listener for the dark mode toggle button
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+  }
+  
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
     });
-
-    // Form Submission Handling
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        // Simple validation
-        if (name && email && message) {
-            alert(`Thank you, ${name}! Your message has been sent.`);
-            this.reset(); // Reset the form fields
-        } else {
-            alert('Please fill in all fields.');
-        }
+  });
+  
+  // Form validation for the contact form
+  const form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      let valid = true;
+  
+      // Check if name is empty
+      const name = document.getElementById("name");
+      if (!name.value.trim()) {
+        valid = false;
+        name.classList.add("error");
+      } else {
+        name.classList.remove("error");
+      }
+  
+      // Check if email is valid
+      const email = document.getElementById("email");
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (!email.value.match(emailPattern)) {
+        valid = false;
+        email.classList.add("error");
+      } else {
+        email.classList.remove("error");
+      }
+  
+      // Check if message is empty
+      const message = document.getElementById("message");
+      if (!message.value.trim()) {
+        valid = false;
+        message.classList.add("error");
+      } else {
+        message.classList.remove("error");
+      }
+  
+      // Prevent form submission if not valid
+      if (!valid) {
+        e.preventDefault();
+      }
     });
-
-    // Lightbox for Gallery Images
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    galleryItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const lightbox = document.createElement('div');
-            lightbox.classList.add('lightbox');
-            const img = document.createElement('img');
-            img.src = this.src;
-            lightbox.appendChild(img);
-            document.body.appendChild(lightbox);
-
-            // Close lightbox on click
-            lightbox.addEventListener('click', function() {
-                this.remove();
-            });
-        });
-    });
-});
+  }
+  
