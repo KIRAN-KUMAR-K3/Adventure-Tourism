@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Adventure Tourism - Explore the beauty of nature with guided tours to amazing destinations.">
-    <meta name="keywords" content="Adventure Tourism, Travel, Destinations, Activities, Nature, Travel Blog">
+    <meta name="description" content="Explore breathtaking destinations, activities, and experiences with our adventure tourism services.">
+    <meta name="keywords" content="Adventure Tourism, Travel, Destinations, Nature, Activities, Travel Blog">
     <meta name="author" content="Kiran Kumar K">
     <title>Adventure Tourism</title>
 
@@ -18,168 +18,304 @@
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+        }
+
+        /* Header Styling */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background-image: url('images/hero_background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
+        }
+
+        .btn {
+            background-color: #ff6347;
+            padding: 12px 25px;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+
+                /* Destinations Section */
+                #destinations {
+            padding: 60px 0;
+            background-color: #1e1e1e; /* Dark background for destinations */
+            text-align: center;
+        }
+
+        #destinations h2 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #ff6347; /* Highlight color */
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .destination {
+            background: #2c2c2c; /* Dark background for items */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .destination:hover {
+            transform: translateY(-5px);
+        }
+
+        .destination-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .destination-img:hover {
+            transform: scale(1.1);
+        }
+
+        .destination h3 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+            color: #ff6347; /* Highlight color */
+        }
+
+        .destination p {
+            padding: 0 15px 15px;
+            color: #e0e0e0; /* Light text color */
+        }
+
+        /* Call to Action Section */
+        .cta {
+            background: #ff6347;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .cta h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .cta p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin: 0 auto;
+        }
+
+        .socials a {
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .socials a:hover {
+            color: #ff6347; /* Highlight color */
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
         <div class="container">
             <h1 class="logo">Adventure Tourism</h1>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#destinations">Destinations</a></li>
-                    <li><a href="#activities">Activities</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <!-- Dark Mode Toggle Button -->
             <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle Dark Mode">
                 <i class="fas fa-moon"></i>
             </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Image -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h2>Explore the Beauty of Nature</h2>
-            <p>Join us on an adventure to some of the most breathtaking locations!</p>
+            <p>Join us on an adventure to some of the most breathtaking locations across the world!</p>
             <a href="#destinations" class="btn">Explore Destinations</a>
         </div>
     </section>
 
     <!-- Destinations Section -->
     <section id="destinations" class="container">
-        <h2>Destinations</h2>
+        <h2>Our Popular Destinations</h2>
         <div class="destination-grid">
             <div class="destination">
                 <h3>Dharmasthala</h3>
-                <img src="images/dharmasthala.jpg" alt="Dharmasthala">
+                <img src="images/dharmasthala.jpg" alt="Dharmasthala" class="destination-img">
                 <p>A spiritual town known for its temples and cultural heritage.</p>
             </div>
             <div class="destination">
                 <h3>INS Museum</h3>
-                <img src="images/ins_museum.jpg" alt="INS Museum">
+                <img src="images/ins_museum.jpg" alt="INS Museum" class="destination-img">
                 <p>Explore India's naval history at this fascinating museum.</p>
             </div>
             <div class="destination">
                 <h3>Rock Garden</h3>
-                <img src="images/rock_garden.jpg" alt="Rock Garden">
+                <img src="images/rock_garden.jpg" alt="Rock Garden" class="destination-img">
                 <p>A beautiful garden filled with unique rock sculptures.</p>
             </div>
             <div class="destination">
                 <h3>Gokarna Beach</h3>
-                <img src="images/gokarna_beach.jpg" alt="Gokarna Beach">
+                <img src="images/gokarna_beach.jpg" alt="Gokarna Beach" class="destination-img">
                 <p>Relax on the serene beaches and enjoy water sports.</p>
             </div>
-            <div class="destination">
-                <h3>Mahabaleshwar</h3>
-                <img src="images/mahabaleshwar.jpg" alt="Mahabaleshwar">
-                <p>A hill station known for its stunning viewpoints and strawberries.</p>
-            </div>
-            <div class="destination">
-                <h3>Yana Caves</h3>
-                <img src="images/yana_caves.jpg" alt="Yana Caves">
-                <p>Discover the unique rock formations and lush greenery.</p>
-            </div>
-            <div class="destination">
-                <h3>Mirjan Fort</h3>
-                <img src="images/mirjan_fort.jpg" alt=" Mirjan Fort">
-                <p>A historical fort with beautiful architecture and views.</p>
-            </div>
-            <div class="destination">
-                <h3>Sharawati Backwater</h3>
-                <img src="images/sharawati_backwater.jpg" alt="Sharawati Backwater">
-                <p>Experience tranquility while boating in the backwaters.</p>
-            </div>
         </div>
+        <a href="destinations.html" class="btn view-more">View All Destinations</a>
     </section>
 
-
-    <!-- Activities Section -->
-<section id="activities" class="container">
-    <h2>Activities</h2>
-    <p>Engage in thrilling activities like trekking, boating, and cultural experiences at each destination.</p>
-    <div class="activity-grid">
-        <div class="activity-card">
-            <img src="images/adventure-activity.jpg" alt="Trekking Activity" class="activity-item">
-            <div class="activity-content">
-                <h3>Trekking</h3>
-                <p>Explore the untamed wilderness with our expert-guided trekking tours.</p>
-            </div>
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <h2>Ready for Your Next Adventure?</h2>
+            <p>Contact us today to book your trip and start your journey with us.</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
         </div>
-        <div class="activity-card">
-            <img src="images/firecamp-activity.jpg" alt="Boating Activity" class="activity-item">
-            <div class="activity-content">
-                <h3>Boating</h3>
-                <p>Experience the serenity of nature from the water with our exclusive boating tours.</p>
-            </div>
-        </div>
-        <div class="activity-card">
-            <img src="images/cultural-tour.jpg" alt="Cultural Tours" class="activity-item">
-            <div class="activity-content">
-                <h3>Cultural Tours</h3>
-                <p>Immerse yourself in the rich culture and traditions of each destination.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-   
-
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="container">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <img src="images/gallery1.jpg" alt="Gallery Image 1" class="gallery-item">
-            <img src="images/gallery2.jpg" alt="Gallery Image 2" class="gallery-item">
-            <img src="images/gallery3.jpg" alt="Gallery Image 3" class="gallery-item">
-            <img src="images/gallery4.jpg" alt="Gallery Image 4" class="gallery-item">
-            <img src="images/gallery5.jpg" alt="Gallery Image 5" class="gallery-item">
-            <img src="images/gallery6.jpg" alt="Gallery Image 6" class="gallery-item">
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="container">
-        <h2>Blog</h2>
-        <p>Read our latest travel tips, personal experiences, and stories from fellow adventurers.</p>
-        <div class="blog-video">
-            <h3>Latest Blog Video</h3>
-            <video controls style="width: 400px; height: auto;">
-                <source src="images/blog1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <h2>Contact Us</h2>
-        <form action="#" method="post" novalidate>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required placeholder="Your Full Name">
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Your Email Address">
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <p>&copy; Created By KIRAN KUMAR K | Daneshwari | Akshay M | Bung Vidhi.</p>
+        <div class="container footer-content">
+            <p>&copy; 2023 Adventure Tourism. All rights reserved.</p>
             <div class="socials">
                 <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -188,7 +324,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- External JavaScript -->
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
+       

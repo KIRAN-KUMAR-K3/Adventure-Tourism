@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover your next adventure with TravelTales. Explore destinations around Karnataka and beyond.">
+    <meta name="keywords" content="Travel, Destinations, Karnataka, Adventure, Explore, Tourism">
+    <meta name="author" content="Kiran Kumar K">
+    <title>Destinations - TravelTales</title>
+
+    <!-- External Fonts and Icons -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+        }
+
+        /* Header Styling */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        /* Banner Section */
+        #banner {
+            text-align: center;
+            padding: 100px 0;
+            background: url('images/hero_background.jpg') no-repeat center center/cover;
+            color: white;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        #banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        #banner p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .location {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        /* Destinations Section */
+        #destinations {
+            padding: 60px 0;
+            background-color: #1e1e1e; /* Dark background for destinations */
+            text-align: center;
+        }
+
+        #destinations h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff6347; /* Highlight color */
+        }
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .destination-item {
+            background: #2c2c2c; /* Dark background for items */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .destination-item:hover {
+            transform: scale(1.05);
+        }
+
+        .destination-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .destination-info {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .destination-info h3 {
+            margin: 10px 0;
+            color: #ff6347; /* Highlight color */
+        }
+
+        .destination-info p {
+            margin: 5px 0;
+            color: #e0e0e0; /* Light text color */
+        }
+
+        .destination-info a {
+            color: #007BFF; /* Link color */
+            text-decoration: none;
+        }
+
+        .destination-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin: 0 auto;
+        }
+
+        .socials a {
+            color: white;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .socials a:hover {
+            color: #ff6347; /* Highlight color */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">TravelTales</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="destinations.html" class="active">Destinations</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section id="banner" class="container">
+        <h2>Discover Your Next Adventure</h2>
+        <p>Explore handpicked destinations that will take your breath away</p>
+        <div class="location">
+            <span>Karnataka</span> | <span>28°C</span>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="container">
+        <h2>Popular Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination-item">
+                <img src="images/dharmasthala.jpg" alt="Dharmasthala Temple" class="destination-img">
+                <div class="destination-info">
+                    <h3>Dharmasthala Temple</h3>
+                    <p><strong>View on Maps:</strong> <a href="https://www.google.com/maps?q=12.9472°+N,75.3841°+E" target="_blank">12.9472° N, 75.3841° E</a></p>
+                    <p><strong>Best Time:</strong> October to March</p>
+                    <p><strong>280 km from Bangalore</strong> | <strong>Travel Time:</strong> ~6 hours by road</p>
+                    <p>A renowned pilgrimage center dedicated to Lord Manjunatha, known for its spiritual significance and charitable activities.</p>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <img src="images/ins_museum.jpg" alt="INS Chapal Warship Museum" class="destination-img">
+                <div class="destination-info">
+                    <h3>INS Chapal Warship Museum</h3>
+                    <p><strong>View on Maps:</strong> <a href="https://www.google.com/maps?q=14.8446°+N,74.1300°+E" target="_blank">14.8446° N, 74.1300° E</a></p>
+                    <p><strong>Best Time:</strong> October to March</p>
+                    <p><strong>520 km from Bangalore</strong> | <strong>Travel Time:</strong> ~10 hours by road</p>
+                    <p>A decommissioned Indian Naval Ship converted into a museum, showcasing naval artifacts and maritime history.</p>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <img src="images/rock_garden.jpg" alt="Rock Garden Karwar" class="destination-img">
+                <div class="destination-info">
+                    <h3>Rock Garden Karwar</h3>
+                    <p><strong>View on Maps:</strong> <a href="https://www.google.com/maps?q=NH+66,+opp.+RTO+office,+Kodibag,+Karwar,+Karnataka+581301" target="_blank">NH 66, opp. RTO office, Kodibag, Karwar, Karnataka 581301</a></p>
+                    <p><strong>Best Time:</strong> November to February</p>
+                    <p><strong>517 km from Bangalore</strong> | <strong>Travel Time:</strong> ~9 hours by road</p>
+                    <p>A rock garden with a landscaping framework of rocks, stones, and gravel, perfect for nature lovers .</p>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <img src="images/gokarna_beach.jpg" alt="Gokarna Beach" class="destination-img">
+                <div class="destination-info">
+                    <h3>Gokarna Beach</h3>
+                    <p><strong>View on Maps:</strong> <a href="https://www.google.com/maps?q=15,+Dandebagh,+Gokarna,+Karnataka+581326" target="_blank">15, Dandebagh, Gokarna, Karnataka 581326</a></p>
+                    <p><strong>Best Time:</strong> October to March</p>
+                    <p><strong>487 km from Bangalore</strong> | <strong>Travel Time:</strong> ~8 hours by road</p>
+                    <p>A pilgrimage town known for its pristine beaches and ancient temples, particularly famous for Om Beach.</p>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <img src="images/yana_caves.jpg" alt="Yana Caves" class="destination-img">
+                <div class="destination-info">
+                    <h3>Yana Caves</h3>
+                    <p><strong>View on Maps:</strong> <a href="https://www.google.com/maps?q=14.6167°+N,+Karnataka+581403" target="_blank">14.6167° N, Karnataka 581403</a></p>
+                    <p><strong>Best Time:</strong> October to February</p>
+                    <p><strong>445 km from Bangalore</strong> | <strong>Travel Time:</strong> ~8 hours by road</p>
+                    <p>Famous for its unique black karst rock formations, surrounded by thick forests, ideal for trekking.</p>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <img src="images/mirjan_fort.jpg" alt="Mirjan Fort" class="destination-img">
+                <div class="destination-info">
+                    <h3>Mirjan Fort</h3>
+                    <p><strong>View on Maps:</strong> <a href="https://www.google.com/maps?q=FCQ9+P2P,+talluk,+Mirjan+Fort+Road,+Mirjan,+Karnataka+581333" target="_blank">FCQ9+P2P, talluk, Mirjan Fort Road, Mirjan, Karnataka 581333</a></p>
+                    <p><strong>Best Time:</strong> October to March</p>
+                    <p><strong>466 km from Bangalore</strong> | <strong>Travel Time:</strong> ~8 hours by road</p>
+                    <p>A 16th-century fort known for its architectural brilliance and historical significance.</p>
+                </div>
+            </div>
+
+            <div class="destination-item">
+                <img src="images/sharawati_backwater.jpg" alt="Sharavati Backwaters" class="destination-img">
+                <div class="destination-info">
+                    <h3>Sharavati Backwaters</h3>
+                    <p><strong>View on Maps:</strong> <a href="https://www.google.com/maps?q=Taribagil,+Church+Rd,+Honnavar,+Karnataka+581334" target="_blank">Taribagil, Church Rd, Honnavar, Karnataka 581334</a></p>
+                    <p><strong>Best Time:</strong> July to February</p>
+                    <p><strong>476 km from Bangalore</strong> | <strong>Travel Time:</strong> ~9 hours by road</p>
+                    <p>A scenic reservoir offering stunning views of the Western Ghats, popular for boating and photography.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 TravelTales. All rights reserved.</p>
+            <div class="socials">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
