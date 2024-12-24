@@ -336,6 +336,48 @@ form button:hover {
         transform: scale(1);
     }
 }
+.activity-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.activity-card {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card img.activity-item {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.activity-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.activity-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.activity-content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #555;
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
