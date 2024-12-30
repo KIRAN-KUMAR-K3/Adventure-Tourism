@@ -46,7 +46,7 @@ Adventure-Tourism/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/KIRAN-KUMAR-K3/Toriusm.git
+   git clone https://github.com/KIRAN-KUMAR-K3/Adventure-Tourism.git
    ```
 
 2. **Navigate to the project directory:**
