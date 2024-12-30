@@ -98,6 +98,7 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ### 🎡 About
-Our Tourism Project aims to provide a seamless platform for travelers to explore and book experiences across various destinations. Designed with user-friendly features, it allows users to discover top tourist spots, plan their itineraries, make bookings for accommodations, transportation, and activities, and find helpful travel guides. This project leverages cutting-edge technology to offer personalized recommendations, ensuring every trip is memorable and hassle-free.
+Adventure Tourism is designed to offer an intuitive platform for travelers seeking to explore new destinations and exciting activities. Whether you're an adrenaline junkie or a nature lover, this platform helps you find your next adventure. With features like travel blogs, user-generated content, and personalized recommendations, the website aims to create an engaging and easy-to-use tool for planning the ultimate adventure trip.
 
 ---
+
