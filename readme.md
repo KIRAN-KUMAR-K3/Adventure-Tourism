@@ -48,14 +48,18 @@ Adventure-Tourism/
    ```bash
    git clone https://github.com/KIRAN-KUMAR-K3/Adventure-Tourism.git
    ```
-
 2. **Navigate to the project directory:**
    ```bash
    cd Adventure-Tourism
    ```
-
 3. **Open the project:**
    Open `index.html` in your preferred web browser to view the website.
+
+---
+
+## 📲 Live Demo
+
+Check out the live version of the project here: [Adventure Tourism Live Demo](https://ash-00000.github.io/Toriusm/)
 
 ---
 
@@ -65,12 +69,6 @@ Adventure-Tourism/
 - [ ] Integrate a booking system for tours and activities.
 - [ ] Include a search feature for destinations and activities.
 - [ ] Enhance the blog section with a CMS.
-
----
-
-## 📸 Visual Preview
-
-**Gallery Preview:**  Add snapshots of the gallery and other sections here.
 
 ---
 
@@ -98,6 +96,8 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ### 🎡 About
+
 Adventure Tourism is designed to offer an intuitive platform for travelers seeking to explore new destinations and exciting activities. Whether you're an adrenaline junkie or a nature lover, this platform helps you find your next adventure. With features like travel blogs, user-generated content, and personalized recommendations, the website aims to create an engaging and easy-to-use tool for planning the ultimate adventure trip.
 
 ---
+
